@@ -8,6 +8,7 @@ public class Sentences
     public int emote;
     public bool isChoices;
     public Choice[] choices;
+    public string name;
     [TextArea(3, 10)]
     public string sentence;
 

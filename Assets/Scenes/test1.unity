@@ -345,14 +345,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144916912}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -135.33939, y: -103.60043, z: -1890.7648}
-  m_LocalScale: {x: 0.8107476, y: 0.8107476, z: 0.8107476}
+  m_LocalPosition: {x: -156.01083, y: -119.42414, z: -2179.5562}
+  m_LocalScale: {x: 0.9345795, y: 0.9345795, z: 0.9345795}
   m_Children:
   - {fileID: 542141159}
   - {fileID: 182685766}
   - {fileID: 126532067}
-  m_Father: {fileID: 310242898}
-  m_RootOrder: 4
+  m_Father: {fileID: 929323655}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &182685765
 GameObject:
@@ -661,10 +661,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2078990291}
-  - {fileID: 929323655}
   - {fileID: 1181877218}
-  - {fileID: 893594901}
-  - {fileID: 144916913}
+  - {fileID: 929323655}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -708,30 +706,36 @@ MonoBehaviour:
     - emote: 1
       isChoices: 0
       choices: []
+      name: Demo
       sentence: '...eh!?'
     - emote: 1
       isChoices: 0
       choices: []
+      name: Demo
       sentence: ..t..that was too straightforward
     - emote: 1
       isChoices: 0
       choices: []
+      name: Demo
       sentence: ..er....
     - emote: 0
       isChoices: 0
       choices: []
+      name: Demo
       sentence: I think I just need some more times to decide
     - emote: 0
-      isChoices: 1
+      isChoices: 0
       choices:
       - element: yes
         scene: 0
       - element: no
         scene: 0
-      sentence: you under stand me right
+      name: 
+      sentence: The silence is echo through the room
     - emote: 0
       isChoices: 0
       choices: []
+      name: 
       sentence: you under stand me right
 --- !u!4 &355759464
 Transform:
@@ -946,6 +950,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737525139 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1778003373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &807403180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,17 +1070,17 @@ RectTransform:
   m_GameObject: {fileID: 893594900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8675, y: 0.8675, z: 0.8675}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 807403183}
   - {fileID: 923890619}
   - {fileID: 1203343469}
-  m_Father: {fileID: 310242898}
-  m_RootOrder: 3
+  m_Father: {fileID: 929323655}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -138.19275}
+  m_AnchoredPosition: {x: 0, y: -159.3}
   m_SizeDelta: {x: 800, y: 209.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &893594902
@@ -1265,9 +1281,11 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8675, y: 0.8675, z: 0.8675}
-  m_Children: []
+  m_Children:
+  - {fileID: 893594901}
+  - {fileID: 144916913}
   m_Father: {fileID: 310242898}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1565,7 +1583,7 @@ RectTransform:
   m_LocalScale: {x: 0.8675, y: 0.8675, z: 0.8675}
   m_Children: []
   m_Father: {fileID: 310242898}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1611,6 +1629,7 @@ MonoBehaviour:
   dialogueText: {fileID: 923890617}
   animator: {fileID: 893594902}
   characterAnim: {fileID: 1181877215}
+  continueButton: {fileID: 737525139}
 --- !u!4 &1466316092
 Transform:
   m_ObjectHideFlags: 0

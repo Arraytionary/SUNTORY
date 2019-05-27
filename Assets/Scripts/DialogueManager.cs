@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     public Animator characterAnim;
     private Queue<Sentences> sentences;
     private Regex reg;
+    public Button continueButton;
 
     void Start()
     {
@@ -21,12 +22,16 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log(reg.Match(test));
     }
 
+    /*
+     *start the dialogue by putting sentence from dialogue into sentence queue 
+    */ 
     public void StartDialogue (Dialogue dialogue)
     {
         //characterAnim.SetBool("isEnd", false);
 
         animator.SetBool("IsOpen", true);
-        nameText.text = dialogue.name;
+        //nameText.text = dialogue.name;
+        
 
         sentences.Clear();
         // foreach(int i in Progress.Instance.test){
@@ -41,6 +46,9 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+    /*
+     * fetch sentences queue and display the dialogue
+    */ 
     public void DisplayNextSentence(){
         //characterAnim.SetInteger("animNum", 1);
         if (sentences.Count == 0)
@@ -48,31 +56,49 @@ public class DialogueManager : MonoBehaviour
             EnDialogue();
             return;
         }
+        continueButton.gameObject.SetActive(false);
         Sentences block = sentences.Dequeue();
 
         if (block.isChoices)
         {
+            EnDialogue();
             DisplayChoices(block.choices);
             return;
         }
 
+        string name = block.name;
+
+        //make this looks nicer
+        MatchTextColor(name);
+
+
         string sentence = block.sentence;
         int emote = block.emote;
+
 
         //sentence = DisPlayCharAnim(sentence);
         characterAnim.SetInteger("animNum", emote);
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        
     }
+
+    /*
+     *animate text in dialogue box one by one 
+    */ 
     IEnumerator TypeSentence (string sentence){
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()){
             dialogueText.text += letter;
             yield return new WaitForSeconds(0.02f);
         }
+        continueButton.gameObject.SetActive(true);
     }
 
+    /*
+     * play character animation 
+    */
     public string DisPlayCharAnim(string sentence) {
         Match m = reg.Match(sentence);
         if (m.Success)
@@ -87,6 +113,10 @@ public class DialogueManager : MonoBehaviour
         return sentence;
     }
 
+    /*
+    *end the dialogue in the scene
+    *animate out the dialogue box & character
+    */
     void EnDialogue(){
         //characterAnim.SetInteger("animNum", 2);
         animator.SetBool("IsOpen", false);
@@ -97,7 +127,19 @@ public class DialogueManager : MonoBehaviour
 
     void DisplayChoices(Choice[] choices)
     {
-        EnDialogue();
         FindObjectOfType<ChoicesManager>().RenderChoices(choices);
+    }
+
+    /*
+     *match the dialogue text to the speaker 
+    */
+    void MatchTextColor(string name)
+    {
+        if (name != "")
+        {
+            dialogueText.color = new Color(1f, 189f / 255f, 234f / 255f);
+        }
+        else dialogueText.color = new Color(1f, 1f, 1f);
+        nameText.text = name;
     }
 }

@@ -373,6 +373,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115302339}
   m_CullTransparentMesh: 0
+--- !u!114 &148063853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2669314425133000383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &353266859
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,8 +665,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 34.13
+  m_fontSizeBase: 34.13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -810,8 +822,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 34.13
+  m_fontSizeBase: 34.13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1659,8 +1671,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 34.13
+  m_fontSizeBase: 34.13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1957,6 +1969,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1314066477}
   animator: {fileID: 1286472224}
   characterAnim: {fileID: 1732665179}
+  continueButton: {fileID: 148063853}
 --- !u!4 &1939220245
 Transform:
   m_ObjectHideFlags: 0

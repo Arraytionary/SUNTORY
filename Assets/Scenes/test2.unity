@@ -516,7 +516,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292007588
 GameObject:
@@ -768,7 +768,7 @@ RectTransform:
   - {fileID: 1007911312}
   - {fileID: 387453716}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -974,6 +974,7 @@ MonoBehaviour:
   dialogueText: {fileID: 629227745}
   animator: {fileID: 1210919778}
   characterAnim: {fileID: 1242277906}
+  continueButton: {fileID: 964817513}
 --- !u!4 &456328856
 Transform:
   m_ObjectHideFlags: 0
@@ -1325,7 +1326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &964817512
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2153,7 +2154,7 @@ GameObject:
   - component: {fileID: 1560918046}
   - component: {fileID: 1560918045}
   m_Layer: 0
-  m_Name: 8beb4f8c56a0050cec09821f315124aa--anime-scenery-computer-lab
+  m_Name: comlab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2219,7 +2220,7 @@ Transform:
   m_LocalScale: {x: 2.961, y: 2.961, z: 2.961}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1607069476
 GameObject:
