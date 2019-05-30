@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-    public string name;
+    public int nextScene;
+    public bool fadeIn;
     //[TextArea(3, 10)]
     public Sentences[] sentences; 
 }

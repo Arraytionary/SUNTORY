@@ -29,6 +29,10 @@ public class ChoicesManager : MonoBehaviour
                 buttons[i].gameObject.SetActive(true);
                 buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = choices[i].element;
                 //Debug.Log(choices[i].scene);
+                foreach(ToIncrement el in choices[i].toIncrement){
+                    Progress.Instance.dict[el.name] += el.value;
+                }
+                Debug.Log(Progress.Instance.dict["demo"]);
                 int scene = choices[i].scene;
                 buttons[i].onClick.AddListener(() => ChangeScene(scene));
             }
@@ -38,6 +42,7 @@ public class ChoicesManager : MonoBehaviour
 
     private void ChangeScene(int scene)
     {
-        SceneManager.LoadScene(scene);
+         Progress.nextScene(scene);
+        // Progress.GlobalMap(2);
     }
 }

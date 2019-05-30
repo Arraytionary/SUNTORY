@@ -10,9 +10,12 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Animator animator;
     public Animator characterAnim;
+    public Animator fadeAnim;
     private Queue<Sentences> sentences;
     private Regex reg;
     public Button continueButton;
+
+    int scene;
 
     void Start()
     {
@@ -28,9 +31,10 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue (Dialogue dialogue)
     {
         //characterAnim.SetBool("isEnd", false);
-
+        fadeAnim.SetBool("playFade", dialogue.fadeIn);
         animator.SetBool("IsOpen", true);
         //nameText.text = dialogue.name;
+        scene = dialogue.nextScene;
         
 
         sentences.Clear();
@@ -54,6 +58,9 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             EnDialogue();
+            // int sceneTogo = 
+            Progress.nextScene(scene);
+            // SceneManager.LoadScene(sceneTogo);
             return;
         }
         continueButton.gameObject.SetActive(false);
@@ -91,7 +98,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()){
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.0f);
         }
         continueButton.gameObject.SetActive(true);
     }
@@ -137,7 +144,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (name != "")
         {
-            dialogueText.color = new Color(1f, 189f / 255f, 234f / 255f);
+            dialogueText.color = new Color(1f, 198f / 255f, 245f / 255f);
         }
         else dialogueText.color = new Color(1f, 1f, 1f);
         nameText.text = name;

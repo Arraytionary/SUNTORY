@@ -5,13 +5,64 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Conver.unity
     guid: a9b97c8bf042a7448952f18c64a5b1f9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/test1.unity
     guid: 47bb62f417a5134479609d71c1f1f5c3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/test2.unity
     guid: 9868a039257b19348be03be75cdaef60
+  - enabled: 1
+    path: Assets/Scenes/Scene0.unity
+    guid: ea1f2ce502619c749b3a9de17f4252da
+  - enabled: 1
+    path: Assets/Scenes/Scene1.unity
+    guid: 52e1cb759de5f92489ffcc055ba9bb8f
+  - enabled: 1
+    path: Assets/Scenes/Scene2.unity
+    guid: b6734a6b93a2f1f48b7fd5cd9bd2f4af
+  - enabled: 1
+    path: Assets/Scenes/YouDied1.unity
+    guid: b0c3a756c3e66bf42853f1d4972a6350
+  - enabled: 1
+    path: Assets/Scenes/YouDied2.unity
+    guid: 68cdd64f6ed7e994980b8f2ac216d5d9
+  - enabled: 1
+    path: Assets/Scenes/Scene3A.unity
+    guid: e29a6f8c4c465964ab598e5c151bafcb
+  - enabled: 1
+    path: Assets/Scenes/Scene3B.unity
+    guid: fd8e66bdcd042864a83faf2a4efce4b3
+  - enabled: 1
+    path: Assets/Scenes/Scene4.unity
+    guid: 826d91a418485b145a61452c3031c41f
+  - enabled: 1
+    path: Assets/Scenes/FirstRunning.unity
+    guid: 2a4c324b906af894b98605c9304078df
+  - enabled: 1
+    path: Assets/Scenes/Icecream.unity
+    guid: 175c124cd4c041e4a9c7bd8dd4c54ed3
+  - enabled: 1
+    path: Assets/Scenes/BgivesFb.unity
+    guid: d3f769c350662164f89ecbf105387d4a
+  - enabled: 1
+    path: Assets/Scenes/AfaceBook1.unity
+    guid: e53ae52d8c182eb4dac2bc8eda0ecade
+  - enabled: 1
+    path: Assets/Scenes/Firstnight.unity
+    guid: 81e2a8a44899a95438911271c8f90013
+  - enabled: 1
+    path: Assets/Scenes/2ndMorning.unity
+    guid: de99995ac0b696d499aa7ff427d80d16
+  - enabled: 1
+    path: Assets/Scenes/GreetingDemo.unity
+    guid: 9c48b1f97be0ee74989622539fdefbd6
+  - enabled: 1
+    path: Assets/Scenes/TickleDemo.unity
+    guid: d150d425765e00742aa2c5aa5dce0a6a
+  - enabled: 1
+    path: Assets/Scenes/ASecondMorning.unity
+    guid: 81a579c6f53369541ae7a6cf78de823d
   m_configObjects: {}
