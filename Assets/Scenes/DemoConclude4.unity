@@ -1608,7 +1608,43 @@ MonoBehaviour:
   dialogue:
     nextScene: 44
     fadeIn: 0
-    sentences: []
+    sentences:
+    - emote: 2
+      name: 
+      sentence: I'm sorry
+      isChoices: 0
+      choices: []
+    - emote: 2
+      name: 
+      sentence: I can't give you the answer...
+      isChoices: 0
+      choices: []
+    - emote: 2
+      name: 
+      sentence: I..I don't know
+      isChoices: 0
+      choices: []
+    - emote: 2
+      name: Demo
+      sentence: I understand
+      isChoices: 0
+      choices: []
+    - emote: 0
+      name: Demo
+      sentence: This shoud not gonna work in the first place
+      isChoices: 0
+      choices: []
+    - emote: 9
+      name: 
+      sentence: Then she walks away her back is slowly faded away from my sight
+      isChoices: 0
+      choices: []
+    - emote: 9
+      name: 
+      sentence: I'm not which face she's gonna make right now, but I know it's gonna
+        covered in tears for sure
+      isChoices: 0
+      choices: []
 --- !u!4 &913116271
 Transform:
   m_ObjectHideFlags: 0
