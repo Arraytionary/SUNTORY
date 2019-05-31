@@ -607,7 +607,9 @@ MonoBehaviour:
         toIncrement: []
       - element: Go for a running exercise
         scene: 8
-        toIncrement: []
+        toIncrement:
+        - name: b
+          value: 1
 --- !u!4 &521097618
 Transform:
   m_ObjectHideFlags: 0

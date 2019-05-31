@@ -1606,7 +1606,7 @@ MonoBehaviour:
         toIncrement:
         - name: demo
           value: 1
-      - element: Ticke her waist
+      - element: Tickle her waist
         scene: 15
         toIncrement:
         - name: demo
