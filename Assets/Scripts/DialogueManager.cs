@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -11,15 +12,20 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public Animator characterAnim;
     public Animator fadeAnim;
-    private Queue<Sentences> sentences;
     private Regex reg;
     public Button continueButton;
+    private Queue<Sentences> sentences;
+    
+    // private int crrSentences;
 
     int scene;
 
     void Start()
     {
+        
         sentences = new Queue<Sentences>();
+        // crrSentences = 0
+        Progress.Instance.dict["crrScene"] = SceneManager.GetActiveScene().buildIndex;
         string test = "*1* hello";
         reg = new Regex("[*](.*?)[*]");
         //Debug.Log(reg.Match(test));
@@ -47,6 +53,10 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         characterAnim.SetInteger("animNum", 0);
+
+        for (int i = 0;i<Progress.Instance.dict["crrSentences"];i++){
+            sentences.Dequeue();
+        }
         DisplayNextSentence();
     }
 
@@ -58,24 +68,23 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             EnDialogue();
-            // int sceneTogo = 
             Progress.nextScene(scene);
-            // SceneManager.LoadScene(sceneTogo);
+            Progress.Instance.dict["crrSentences"] = 0;
             return;
         }
         continueButton.gameObject.SetActive(false);
         Sentences block = sentences.Dequeue();
+        Progress.Instance.dict["crrSentences"]++;
 
         if (block.isChoices)
         {
             EnDialogue();
             DisplayChoices(block.choices);
+            Progress.Instance.dict["crrSentences"] = 0;
             return;
         }
 
         string name = block.name;
-
-        //make this looks nicer
         MatchTextColor(name);
 
 

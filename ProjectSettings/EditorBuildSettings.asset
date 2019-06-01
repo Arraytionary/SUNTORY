@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/test2.unity
     guid: 9868a039257b19348be03be75cdaef60
+  - enabled: 0
+    path: Assets/Scenes/StartMenu.unity
+    guid: 24957981a9468024b8e95e4c08f6b769
   - enabled: 1
     path: Assets/Scenes/Scene0.unity
     guid: ea1f2ce502619c749b3a9de17f4252da
@@ -147,9 +150,45 @@ EditorBuildSettings:
     path: Assets/Scenes/DemoConclude4.unity
     guid: 4fd4288afcbda1e4fbcdc5fa994737bb
   - enabled: 1
+    path: Assets/Scenes/DE1.unity
+    guid: f3cf45fa4e69973438b3ea3ad19652da
+  - enabled: 1
+    path: Assets/Scenes/DE2.unity
+    guid: fa93cf555a5831545bf2e68b81e1c210
+  - enabled: 1
+    path: Assets/Scenes/AB.unity
+    guid: 26843b5aef8d43a4fb5732c79d8df5f3
+  - enabled: 1
+    path: Assets/Scenes/ClassRoom4.unity
+    guid: 82385812518bd6d44b3c7d2488426044
+  - enabled: 1
+    path: Assets/Scenes/Cconclude.unity
+    guid: 3c1ee1fcd8bdc234ca4cd9e7659117e8
+  - enabled: 1
+    path: Assets/Scenes/Cconclude2.unity
+    guid: e717b2482ce07ca40ab563b6a0d7c77a
+  - enabled: 1
+    path: Assets/Scenes/Cconclude3.unity
+    guid: d7fba64ce6435e84bad85de86331435b
+  - enabled: 1
+    path: Assets/Scenes/Cconclude4.unity
+    guid: 32dab2d1654318e4395f890ca245095a
+  - enabled: 1
+    path: Assets/Scenes/Bconclude1.unity
+    guid: fcc201aab887bef419237d007f1d4911
+  - enabled: 1
+    path: Assets/Scenes/Bconclude2.unity
+    guid: 486bb481fc1ff2149a026c3e24479ce1
+  - enabled: 1
+    path: Assets/Scenes/Bconclude3.unity
+    guid: bb202a6920bdb7b4db1acd6bbb6e7865
+  - enabled: 1
+    path: Assets/Scenes/Bconclude4.unity
+    guid: 725f78aa4037bc347ac4f28a55345952
+  - enabled: 1
+    path: Assets/Scenes/Bconclude5.unity
+    guid: 24b664c2941f949479d76820153d3e0c
+  - enabled: 1
     path: Assets/Scenes/EndCut.unity
     guid: 1729e4f0c7e3f0d4f8eabacc81374f0c
-  - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
-    guid: 24957981a9468024b8e95e4c08f6b769
   m_configObjects: {}

@@ -29,20 +29,24 @@ public class ChoicesManager : MonoBehaviour
                 buttons[i].gameObject.SetActive(true);
                 buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = choices[i].element;
                 //Debug.Log(choices[i].scene);
-                foreach(ToIncrement el in choices[i].toIncrement){
-                    Progress.Instance.dict[el.name] += el.value;
-                }
-                Debug.Log(Progress.Instance.dict["demo"]);
+                // foreach(ToIncrement el in choices[i].toIncrement){
+                //     Progress.Instance.dict[el.name] += el.value;
+                // }
+                // Debug.Log(Progress.Instance.dict["demo"]);
                 int scene = choices[i].scene;
-                buttons[i].onClick.AddListener(() => ChangeScene(scene));
+                ToIncrement[] tic = choices[i].toIncrement;
+                buttons[i].onClick.AddListener(() => ChangeScene(scene, tic));
             }
             else break;
         }
     }
 
-    private void ChangeScene(int scene)
-    {
-         Progress.nextScene(scene);
+    private void ChangeScene(int scene, ToIncrement[] tic)
+    {   
+        foreach(ToIncrement el in tic){
+                    Progress.Instance.dict[el.name] += el.value;
+                }
+        Progress.nextScene(scene);
         // Progress.GlobalMap(2);
     }
 }

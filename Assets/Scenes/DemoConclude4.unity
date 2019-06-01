@@ -876,11 +876,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
-    - target: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1115844766}
     - target: {fileID: 2669314426176033181, guid: 6fc471a6c6046894e978b91f21482c6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -986,6 +981,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1115844766}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc471a6c6046894e978b91f21482c6d, type: 3}
 --- !u!224 &587915083 stripped
@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    nextScene: 44
+    nextScene: 47
     fadeIn: 0
     sentences:
     - emote: 2

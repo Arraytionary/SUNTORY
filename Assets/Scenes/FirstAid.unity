@@ -1791,7 +1791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    nextScene: 3
+    nextScene: 29
     fadeIn: 1
     sentences:
     - emote: 0
@@ -2325,11 +2325,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
-    - target: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 939272617}
     - target: {fileID: 2669314426176033181, guid: 6fc471a6c6046894e978b91f21482c6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2435,5 +2430,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 939272617}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc471a6c6046894e978b91f21482c6d, type: 3}
