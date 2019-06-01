@@ -30,6 +30,11 @@ public class DialogueManager : MonoBehaviour
         reg = new Regex("[*](.*?)[*]");
         //Debug.Log(reg.Match(test));
     }
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            Progress.loadScene(58);
+        }
+    }
 
     /*
      *start the dialogue by putting sentence from dialogue into sentence queue 
@@ -53,10 +58,11 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         characterAnim.SetInteger("animNum", 0);
-
+        Debug.Log(Progress.Instance.dict["crrSentences"]);
         for (int i = 0;i<Progress.Instance.dict["crrSentences"];i++){
             sentences.Dequeue();
         }
+        Progress.Instance.dict["crrSentences"]--;
         DisplayNextSentence();
     }
 

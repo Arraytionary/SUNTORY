@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System;
 
+[System.Serializable]
 public class Progress : Singleton<Progress> 
 {
     // public int[] test;
@@ -16,7 +17,8 @@ public class Progress : Singleton<Progress>
         {"see",0},
         {"sp1",0},
         {"sp2",0},
-        {"crrSentences",0}
+        {"crrSentences",0},
+        {"crrScene", 0}
     };
     // dict.Add();
     // int res;
@@ -205,7 +207,7 @@ public class Progress : Singleton<Progress>
         
     }
     public static void loadScene(int scene){
-        // scene+=1;
+        scene+=1;
         SceneManager.LoadScene(scene);
     }
 }
