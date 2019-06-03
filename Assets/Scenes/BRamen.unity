@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 78153102}
   - component: {fileID: 78153101}
   - component: {fileID: 78153100}
+  - component: {fileID: 78153103}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -203,6 +204,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &78153103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78153099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ea7e50190eda64e8058fe1dff7ee6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &177445722
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +592,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1419,8 +1432,8 @@ MonoBehaviour:
       choices: []
     - emote: 0
       name: B
-      sentence: I want to try the ramen at "DinSho" for so long, this seems to be
-        a nice opportunity
+      sentence: I wanted to try the ramen at "DinSho" for a long time ago, this seems
+        to be a nice opportunity
       isChoices: 0
       choices: []
     - emote: 0
@@ -1686,11 +1699,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
-    - target: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1138668431}
     - target: {fileID: 2669314426176033181, guid: 6fc471a6c6046894e978b91f21482c6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1796,6 +1804,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1138668431}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc471a6c6046894e978b91f21482c6d, type: 3}
 --- !u!1 &1601019412

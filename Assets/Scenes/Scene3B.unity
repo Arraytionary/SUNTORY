@@ -437,6 +437,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Name
       objectReference: {fileID: 0}
+    - target: {fileID: 7127321537351247302, guid: 3f70c6652f080244c93f21bd1c9b6d64,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127321537351247302, guid: 3f70c6652f080244c93f21bd1c9b6d64,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127321537351247302, guid: 3f70c6652f080244c93f21bd1c9b6d64,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7127321537351247320, guid: 3f70c6652f080244c93f21bd1c9b6d64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -541,21 +556,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127321537351247302, guid: 3f70c6652f080244c93f21bd1c9b6d64,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127321537351247302, guid: 3f70c6652f080244c93f21bd1c9b6d64,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127321537351247302, guid: 3f70c6652f080244c93f21bd1c9b6d64,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f70c6652f080244c93f21bd1c9b6d64, type: 3}
@@ -1082,6 +1082,7 @@ GameObject:
   - component: {fileID: 923730686}
   - component: {fileID: 923730685}
   - component: {fileID: 923730684}
+  - component: {fileID: 923730687}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1154,6 +1155,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &923730687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923730683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ea7e50190eda64e8058fe1dff7ee6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1116020857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,7 +1742,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2380,11 +2393,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
-    - target: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 504986092}
     - target: {fileID: 2669314426176033181, guid: 6fc471a6c6046894e978b91f21482c6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2490,6 +2498,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2669314426176033180, guid: 6fc471a6c6046894e978b91f21482c6d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 504986092}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc471a6c6046894e978b91f21482c6d, type: 3}
 --- !u!114 &2058312814 stripped

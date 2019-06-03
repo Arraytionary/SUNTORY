@@ -498,6 +498,7 @@ GameObject:
   - component: {fileID: 260481802}
   - component: {fileID: 260481801}
   - component: {fileID: 260481800}
+  - component: {fileID: 260481803}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -570,6 +571,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &260481803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260481799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ea7e50190eda64e8058fe1dff7ee6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &310242894
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,12 +631,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -701,42 +714,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Demo
+    nextScene: 0
+    fadeIn: 0
     sentences:
     - emote: 1
-      isChoices: 0
-      choices: []
       name: Demo
       sentence: '...eh!?'
-    - emote: 1
       isChoices: 0
       choices: []
+    - emote: 1
       name: Demo
       sentence: ..t..that was too straightforward
-    - emote: 1
       isChoices: 0
       choices: []
+    - emote: 1
       name: Demo
       sentence: ..er....
-    - emote: 0
       isChoices: 0
       choices: []
+    - emote: 0
       name: Demo
       sentence: I think I just need some more times to decide
+      isChoices: 0
+      choices: []
     - emote: 0
+      name: 
+      sentence: The silence is echo through the room
       isChoices: 0
       choices:
       - element: yes
         scene: 0
+        toIncrement: []
       - element: no
         scene: 0
-      name: 
-      sentence: The silence is echo through the room
+        toIncrement: []
     - emote: 0
-      isChoices: 0
-      choices: []
       name: 
       sentence: you under stand me right
+      isChoices: 0
+      choices: []
 --- !u!4 &355759464
 Transform:
   m_ObjectHideFlags: 0
@@ -1629,6 +1645,7 @@ MonoBehaviour:
   dialogueText: {fileID: 923890617}
   animator: {fileID: 893594902}
   characterAnim: {fileID: 1181877215}
+  fadeAnim: {fileID: 0}
   continueButton: {fileID: 737525139}
 --- !u!4 &1466316092
 Transform:

@@ -9,6 +9,6 @@ public class StartManager : MonoBehaviour
     // public Button startButton;
     // public Button LoadButton;
     public void startGame(){
-        Progress.loadScene(Progress.Instance.dict["crrScene"]);
+        Progress.loadScene(0);
     }
 }

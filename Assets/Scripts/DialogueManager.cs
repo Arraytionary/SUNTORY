@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -12,7 +11,6 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     public Animator characterAnim;
     public Animator fadeAnim;
-    private Regex reg;
     public Button continueButton;
     private Queue<Sentences> sentences;
     
@@ -25,10 +23,7 @@ public class DialogueManager : MonoBehaviour
         
         sentences = new Queue<Sentences>();
         // crrSentences = 0
-        Progress.Instance.dict["crrScene"] = SceneManager.GetActiveScene().buildIndex;
-        string test = "*1* hello";
-        reg = new Regex("[*](.*?)[*]");
-        //Debug.Log(reg.Match(test));
+        Progress.Instance.dict["crrScene"] = SceneManager.GetActiveScene().buildIndex - 1;
     }
     void Update(){
         if(Input.GetKeyDown(KeyCode.Escape)){
@@ -86,7 +81,7 @@ public class DialogueManager : MonoBehaviour
         {
             EnDialogue();
             DisplayChoices(block.choices);
-            Progress.Instance.dict["crrSentences"] = 0;
+            //Progress.Instance.dict["crrSentences"] = 0;
             return;
         }
 
@@ -121,19 +116,19 @@ public class DialogueManager : MonoBehaviour
     /*
      * play character animation 
     */
-    public string DisPlayCharAnim(string sentence) {
-        Match m = reg.Match(sentence);
-        if (m.Success)
-        {
-            string animNum = m.Value.Substring(1, m.Value.Length - 2);
-            Debug.Log(reg.Match(sentence));
-            characterAnim.SetInteger("animNum", int.Parse(animNum));
-        }
+    //public string DisPlayCharAnim(string sentence) {
+    //    Match m = reg.Match(sentence);
+    //    if (m.Success)
+    //    {
+    //        string animNum = m.Value.Substring(1, m.Value.Length - 2);
+    //        Debug.Log(reg.Match(sentence));
+    //        characterAnim.SetInteger("animNum", int.Parse(animNum));
+    //    }
         
-        //characterAnim.SetInteger("animNum", animNum);
-        reg.Replace(sentence, "");
-        return sentence;
-    }
+    //    //characterAnim.SetInteger("animNum", animNum);
+    //    reg.Replace(sentence, "");
+    //    return sentence;
+    //}
 
     /*
     *end the dialogue in the scene

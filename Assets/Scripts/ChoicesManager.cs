@@ -46,6 +46,7 @@ public class ChoicesManager : MonoBehaviour
         foreach(ToIncrement el in tic){
                     Progress.Instance.dict[el.name] += el.value;
                 }
+        Progress.Instance.dict["crrSentences"] = 0;
         Progress.nextScene(scene);
         // Progress.GlobalMap(2);
     }
